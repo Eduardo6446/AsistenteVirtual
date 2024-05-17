@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asistente Virtual</title>
+</head>
+<body>
+    <h1>Asistente Virtual</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="user_input" size="100">
+        <input type="submit" value="Send">
+    </form>
+    <div id="chat-log">
+        {% if message %}
+            <p><strong>You:</strong> {{ message.user_input }}</p>
+            <p><strong>Bot:</strong> {{ message.bot_response }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
