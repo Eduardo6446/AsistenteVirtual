@@ -7,8 +7,9 @@
     <h1>Asistente Virtual</h1>
     <form method="POST">
         {% csrf_token %}
-        <input type="text" name="user_input" size="100">
-        <input type="submit" value="Send">
+        <button type="submit" name="user_input" value="option1">Que es cs50</button>
+        <button type="submit" name="user_input" value="option2">Opción 2</button>
+        <button type="submit" name="user_input" value="option3">Opción 3</button>
     </form>
     <div id="chat-log">
         {% if message %}
